@@ -38,7 +38,7 @@ with open('pull_requests.csv', 'w', newline='') as file:
             ttm = p.merged_at - p.created_at
             ttm_hours = ttm.days * 24 + ttm.seconds / 3600
 
-            writer.writerow([
+            row = [
                 p.number,
                 p.title,
                 p.state,
@@ -50,4 +50,7 @@ with open('pull_requests.csv', 'w', newline='') as file:
                 round(ttm_hours, 2) if p.merged_at is not None else "",
                 round(cycle_time_hours, 2) if p.merged_at is not None else "",
                 p.html_url
-            ])
+            ]
+
+            writer.writerow(row)
+            print(row)
