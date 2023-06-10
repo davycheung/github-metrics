@@ -4,14 +4,16 @@ import time
 
 from github import Github
 
+# Filter pull requests opened by the following users.
 USERS_TO_TRACK = [
     "SOME_GITHUB_LOGIN_USER",
 ]
 
 g = Github(os.getenv('GITHUB_API_TOKEN'))
-alloy_repo = g.get_repo(os.getenv('REPO_NAME'))
 
-pulls = alloy_repo.get_pulls(state="closed")
+repo = g.get_repo(os.getenv('REPO_NAME'))
+
+pulls = repo.get_pulls(state="closed")
 
 with open('pull_requests.csv', 'w', newline='') as file:
     writer = csv.writer(file)
@@ -62,4 +64,4 @@ with open('pull_requests.csv', 'w', newline='') as file:
 
                 writer.writerow(row)
                 print(row)
-                time.sleep(2)
+                time.sleep(2) # Sleep to avoid exceeding github rate limits
