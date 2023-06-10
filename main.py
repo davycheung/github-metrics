@@ -27,10 +27,11 @@ with open('pull_requests.csv', 'w', newline='') as file:
     for p in pulls:
         pr_commits = p.get_commits()
         first_commit = pr_commits[0] if pr_commits.totalCount > 0 else None
-        first_commit_date = first_commit.commit.author.date
-        total_diff_size = p.additions + p.deletions
 
         if first_commit is not None and p.merged_at is not None:
+            first_commit_date = first_commit.commit.author.date
+            total_diff_size = p.additions + p.deletions
+
             cycle_time = p.merged_at - first_commit.commit.author.date
             cycle_time_hours = cycle_time.days * 24 + cycle_time.seconds / 3600
 
