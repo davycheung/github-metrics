@@ -1,5 +1,6 @@
 import csv
 import os
+import time
 
 from github import Github
 
@@ -54,3 +55,4 @@ with open('pull_requests.csv', 'w', newline='') as file:
 
             writer.writerow(row)
             print(row)
+            time.sleep(1)
