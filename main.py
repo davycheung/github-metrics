@@ -64,4 +64,4 @@ with open('pull_requests.csv', 'w', newline='') as file:
 
                 writer.writerow(row)
                 print(row)
-                time.sleep(2) # Sleep to avoid exceeding github rate limits
+                time.sleep(3)  # Sleep to avoid exceeding github rate limit
