@@ -14,6 +14,7 @@ g = Github(os.getenv('GITHUB_API_TOKEN'))
 repo = g.get_repo(os.getenv('REPO_NAME'))
 
 pulls = repo.get_pulls(state="closed")
+pulls = repo.get_pulls(state="closed", sort="created", direction="desc")
 
 with open('pull_requests.csv', 'w', newline='') as file:
     writer = csv.writer(file)
