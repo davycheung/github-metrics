@@ -1,0 +1,17 @@
+number,title,state,diff size,user,first commit,created_at,merged_at,time to merge (hours),cycle time (hours),url
+8852,[10.x] Remove importing `Controller` from one example in hashing.md,closed,1,obfuscated,6/9/23 17:05,6/9/23 17:09,6/9/23 20:27,3.3,3.38,https://github.com/laravel/docs/pull/8852
+8851,[10.x] Import `Crypt` in the example of `assertSessionHasInput`,closed,2,obfuscated,6/9/23 10:23,6/9/23 10:29,6/9/23 14:49,4.34,4.45,https://github.com/laravel/docs/pull/8851
+8850,Change tilde to $HOME for $PATH variable,closed,2,obfuscated,6/9/23 9:34,6/9/23 9:35,6/9/23 14:50,5.24,5.26,https://github.com/laravel/docs/pull/8850
+8849,[10.x] Fix word in Eloquent Relationships page,closed,2,obfuscated,6/9/23 5:49,6/9/23 5:57,6/9/23 14:51,8.9,9.03,https://github.com/laravel/docs/pull/8849
+8848,[10.x] Remove importing a class from two examples of Database Testing,closed,2,obfuscated,6/8/23 22:30,6/8/23 22:41,6/9/23 2:00,3.32,3.49,https://github.com/laravel/docs/pull/8848
+8847,[10.x] Add `replaceHeaders` method into http-client,closed,12,obfuscated,6/8/23 13:04,6/8/23 13:05,6/8/23 13:21,0.27,0.27,https://github.com/laravel/docs/pull/8847
+8846,Import Rule class in validation.md,closed,1,obfuscated,6/8/23 12:39,6/8/23 12:40,6/8/23 13:32,0.86,0.87,https://github.com/laravel/docs/pull/8846
+8845,Update migrations.md - migrate:rollback --pretend,closed,6,obfuscated,6/8/23 12:05,6/8/23 12:11,6/8/23 13:34,1.39,1.48,https://github.com/laravel/docs/pull/8845
+8844,[10.x] Document `assertMethodNotAllowed`,closed,8,obfuscated,6/7/23 20:01,6/7/23 20:06,6/8/23 13:46,17.66,17.75,https://github.com/laravel/docs/pull/8844
+8841,[10.x] Remove importing classes from some examples of HTTP Tests,closed,6,obfuscated,6/6/23 21:04,6/6/23 21:07,6/6/23 21:37,0.49,0.55,https://github.com/laravel/docs/pull/8841
+8840,[10.x] Update vite.md - Grammar fix,closed,2,obfuscated,6/5/23 18:12,6/5/23 18:13,6/5/23 19:03,0.83,0.85,https://github.com/laravel/docs/pull/8840
+8835,[10.x] Sleep hook,closed,17,obfuscated,6/2/23 6:16,6/2/23 6:18,6/2/23 13:06,6.8,6.83,https://github.com/laravel/docs/pull/8835
+8832,[10.x] Vite HMR + Sail + WSL2,closed,22,obfuscated,6/2/23 2:48,6/2/23 3:09,6/2/23 13:22,10.22,10.58,https://github.com/laravel/docs/pull/8832
+8829,Fix broken link,closed,2,obfuscated,5/31/23 4:49,5/31/23 4:50,5/31/23 13:33,8.71,8.74,https://github.com/laravel/docs/pull/8829
+8828,Add TypeScript support to `Breeze & React / Vue` section in Starter Kits,closed,10,obfuscated,5/30/23 14:57,5/30/23 14:58,5/30/23 15:30,0.53,0.54,https://github.com/laravel/docs/pull/8828
+8827,Fix error in Arr::mapWithKeys() example code,closed,2,obfuscated,5/30/23 10:43,5/30/23 10:44,5/30/23 14:17,3.55,3.57,https://github.com/laravel/docs/pull/8827
