@@ -44,6 +44,7 @@ with open('pull_requests.csv', 'w', newline='') as file:
         "merged_at",
         "time to merge (hours)",
         "cycle time (hours)",
+        "review speed (hours)",
         "url"
     ])
 
@@ -67,6 +68,12 @@ with open('pull_requests.csv', 'w', newline='') as file:
                 ttm = p.merged_at - p.created_at
                 ttm_hours = ttm.days * 24 + ttm.seconds / 3600
 
+                reviews = p.get_reviews()
+                review_speed_hours = None
+                if (reviews.totalCount > 0):
+                    review_speed = reviews[0].submitted_at  - p.created_at
+                    review_speed_hours = review_speed.days  * 24 + review_speed.seconds / 3600
+
                 row = [
                     p.number,
                     p.title,
@@ -76,8 +83,9 @@ with open('pull_requests.csv', 'w', newline='') as file:
                     first_commit_date,
                     p.created_at,
                     p.merged_at,
-                    round(ttm_hours, 2) if p.merged_at is not None else "",
-                    round(cycle_time_hours, 2) if p.merged_at is not None else "",
+                    round(ttm_hours, 2),
+                    round(cycle_time_hours, 2),
+                    round(review_speed_hours, 2) if review_speed_hours is not None else "",
                     p.html_url
                 ]
 
